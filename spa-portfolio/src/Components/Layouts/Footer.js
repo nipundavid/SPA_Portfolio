@@ -93,7 +93,7 @@ function Footer() {
           {/* Footer Bottom */}{" "}
           <div className="footer-bottom">
             <p className="text-xs-center">
-              & copy; {new Date().getFullYear()}
+              &copy; {new Date().getFullYear()}
               Nipun David - All rights Reserved{" "}
             </p>{" "}
           </div>{" "}
