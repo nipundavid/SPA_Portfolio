@@ -11,20 +11,29 @@ import Contacts from "./Components/Pages/Contacts";
 import News from "./Components/Pages/News";
 import Details from "./Components/Pages/Details";
 import NotFoundPage from "./Components/Pages/NotFoundPage";
+import MovieList from "./Test/MovieList";
+import Nav from "./Test/Nav";
+import { MovieProvider } from "./Test/MovieContext";
 
 function App() {
   return (
-    <h2>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/news" component={News}></Route>
-        <Route path="/contacts" component={Contacts}></Route>
-        <Route path="/details" component={Details}></Route>
-        <Route component={NotFoundPage}></Route>
-      </Switch>
-      <Footer />
-    </h2>
+    // <div>
+    //   <NavBar />
+    //   <Switch>
+    //     <Route exact path="/" component={Home}></Route>
+    //     <Route path="/news" component={News}></Route>
+    //     <Route path="/contacts" component={Contacts}></Route>
+    //     <Route path="/details" component={Details}></Route>
+    //     <Route component={NotFoundPage}></Route>
+    //   </Switch>
+    //   <Footer />
+    // </div>
+    <div>
+      {/* <Nav></Nav> */}
+      <MovieProvider>
+        <MovieList> </MovieList>
+      </MovieProvider>
+    </div>
   );
 }
 

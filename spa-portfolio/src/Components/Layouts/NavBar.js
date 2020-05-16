@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../logo.svg";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <img src={logo} alt="logo" style={{ width: "35px" }}></img>
@@ -15,10 +15,11 @@ function NavBar() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        // The hamburger icon
+        {/* The hamburger icon */}
         <i className="fas fa-bars" style={{ color: "#fff" }}></i>
       </button>
       {/* <span className="navbar-toggler-icon" /> */}
+      {props.name}
 
       <div className="collapse navbar-collapse ml-5" id="navbarTogglerDemo01">
         <Link className="navbar-brand" href="#"></Link>
