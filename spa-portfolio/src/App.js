@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components//Layouts/NavBar";
 
 function App() {
   return (

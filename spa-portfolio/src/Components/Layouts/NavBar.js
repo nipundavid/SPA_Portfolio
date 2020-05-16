@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -21,7 +21,7 @@ function NavBar() {
         <ul className="navbar-nav m-auto mt-2 mt-lg-0">
           <li className="nav-item active">
             <a className="nav-link text-white  ml-5" href="#">
-              &nbsp;<i class="fas fa-home"></i> Home{" "}
+              &nbsp;<i className="fas fa-home"></i> Home{" "}
               <span className="sr-only">(current)</span>
             </a>
           </li>
