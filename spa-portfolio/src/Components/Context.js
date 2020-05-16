@@ -1,14 +1,20 @@
-import React, { Component } from "react";
+import React, { createContext, useState } from "react";
+import { placeInfo, reviews, detailInfo, news } from "../data";
 
-const infoContext = React.createContext();
+export const InfoContext = createContext();
 
-//Provider
-//Consumer
-
-class InfoContext extends Component {
-  render() {
-    return <div></div>;
-  }
-}
-
-export default InfoContext;
+export const InfoProvider = (props) => {
+  const [Data, setData] = useState({
+    info: placeInfo,
+    rev: reviews,
+    dInfo: detailInfo,
+    new: news,
+  });
+  return (
+    <div>
+      <InfoContext.Provider value={[Data, setData]}>
+        {props.children}
+      </InfoContext.Provider>
+    </div>
+  );
+};

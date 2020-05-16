@@ -1,13 +1,24 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
+import { InfoContext } from "../Context";
+import Info from "../Info";
 
-class Home extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Home Page</h2>
+const Home = () => {
+  const [data, setData] = useContext(InfoContext);
+  return (
+    <div className="container">
+      <div className="row mt-5">
+        {data.info.map((item) => (
+          <Info
+            key={item.id}
+            img={item.img}
+            headerTitle={item.headerTitle}
+            headerSubtitle={item.headerSubtitle}
+            headerText={item.headerText}
+          />
+        ))}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Home;
